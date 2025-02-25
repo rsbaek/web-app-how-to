@@ -1,6 +1,6 @@
 ## **1\. Setting Up Your Project Directory**
 
-1. **Choose a Directory:  
+1. ***Choose a Directory:  
     **Decide on a directory where you want your project to live. There’s no need to initialize a Git repository unless you plan to share your code or need remote access.  
 
 2. **Create the Main Project Folder:  
