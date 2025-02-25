@@ -1,33 +1,33 @@
 ## **1\. Setting Up Your Project Directory**
 
-1. ***Choose a Directory:  
+1. **Choose a Directory:**  
     **Decide on a directory where you want your project to live. There’s no need to initialize a Git repository unless you plan to share your code or need remote access.  
 
-2. **Create the Main Project Folder:  
+2. **Create the Main Project Folder:**   
     **For example, create a folder called “Test_App”. Avoid spaces and special characters as they tend to fuck things up.  
 
-3. **Backend Directory:  
+3. **Backend Directory:**   
     **Inside your project folder, create a folder to house your backend code, typically you would name this “Server”. (You don’t need to create a separate client folder here because Vite will handle that for you later.)
 
 ## **2\. Creating the Backend (Server)**
 
-1. **Initialize the Backend Project:  
-    **Open your terminal, navigate to your server folder, and run:  
+1. **Initialize the Backend Project:**   
+    *Open your terminal, navigate to your server folder, and run:*  
     npm init -y  
     <br/>This command creates a package.json file with default settings.  
 
-2. **Install Dependencies:  
+2. **Install Dependencies:**   
     **Install Express (for handling HTTP requests) and nodemon (for auto-restarting your server during development- you can install both at the same time with the following command:  
     npm install express nodemon  
 
-3. **Add a Start Script:  
+3. **Add a Start Script:**   
     **Open your package.json file and find the ‘scripts’ section, you want to add a script to run your server so you can type something like npm bananas to launch your server  
     For example add this:  
     "scripts": { "server": "nodemon server.js" }  
     <br/>This tells npm to run server.js with nodemon when you execute:  
     npm run server  
 
-4. **Create the Server File:  
+4. **Create the Server File:**   
     **In the server folder, create a file named server.js. This will be your entry point for the backend. Since this file is literally blank, you will need to add your own server code with express to handle incoming API requests (remember your Express lectures?)  
     Here is some boiler plate code to get started:  
     <br/>const express = require('express');  
@@ -42,37 +42,37 @@
 
 ## **3\. Creating the Frontend with Vite**
 
-1. **Navigate to the Root Folder:  
+1. **Navigate to the Root Folder:**   
     **Go back to the main project folder (the “Test_App” we made earlier) either using the terminal or the VS Browser and then…  
 
-2. **Install Vite:  
+2. **Install Vite:**   
     **Follow the latest guide at [Vite’s official site](https://vite.dev/guide/). At the time of writing, you can run:  
     npm create vite@latest
 
 When prompted, choose a project name like, ‘My App’ and select the React framework option, and the Javascript language.  
 <br/>**Note**: Whatever you name your project is what the name of your client folder will be, so if you don’t have a specific name in mind, just name it ‘client’. I called my project ‘poop’ and changing it after the fact was a pain.
 
-1. **Install Dependencies for the Frontend:  
+1. **Install Dependencies for the Frontend:**   
     **Once Vite has done it’s thing, navigate back to the new client folder in your terminal and install dependencies:  
     npm install
 
 ## **4\. React AutoComplete and the Router Dom**
 
-1. **Download the Rapid Fire Cannon (React Function Component):  
+1. **Download the Rapid Fire Cannon (React Function Component):**   
     **Eric demo’d a thing called the [ES7+ React/Redux/React-Native Snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets) extension which lets you create a new React Component boilerplate by typing:  
     rfc  
     <br/>In your VSCode. When you type rcf (React Function Component), and then hit **TAB**, it will auto-generate the component boilerplate.  
     <br/>**Bonus** **Note:** To take advantage of auto-imports, begin typing the component name when you are in your code and auto complete it with TAB, you should have a setting turned on by default that will automatically add the import to the top of the page if it’s missing. If this setting is not turned on for you, it’s a prettier thing. Google it.  
 
-2. **Install React Router:  
+2. **Install React Router:**   
     **For client-side routing, install React Router DOM:  
     npm install react-router-dom  
     <br/>This creates a react-router-dom dependency. Not sure what it means but it’s what Eric said.  
 
-3. **Make a Component:  
+3. **Make a Component:**   
     **This one is easy, make your main app component, pick something generic, like “App”. If react starts you off with one of these, you can use that.  
 
-4. **Import Stuff to your Component:  
+4. **Import Stuff to your Component:**   
     **In your main component (for example, in src/main.jsx or src/App.jsx), import the necessary components:  
     import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
