@@ -12,7 +12,7 @@ app.use(CORS());
 app.use(urlencoded({ extended: true }))
 
 // Import stuff?
-import userRouter from './routes/userRouter';
+import userRouter from './routes/userRouter.js';
 
 // lets us know backend is running
 app.get('/', (req, res) => {

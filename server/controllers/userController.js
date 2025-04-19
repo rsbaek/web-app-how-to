@@ -1,5 +1,5 @@
 // Import the users object
-import users from '../users';
+import users from '../users.js';
 // Initialize the empty controller object.
 const userController = {};
 
