@@ -1,5 +1,5 @@
 // Import the users object
-const users = require('../users')
+import users from '../users';
 // Initialize the empty controller object.
 const userController = {};
 
@@ -41,5 +41,5 @@ userController.loginUser = (req, res, next) => {
 }
 
 // Export the user controller
-module.exports = userController;
+export default userController;
 

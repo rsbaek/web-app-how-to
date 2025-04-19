@@ -1,15 +1,15 @@
 //   <<Imports>>
-const express = require('express');
-const userController = require('../controllers/userController') 
+import { Router } from 'express';
+import { loginUser } from '../controllers/userController'; 
 
 // Create a new router
-const userRouter = express.Router()
+const userRouter = Router()
 
 
 // User Login handler
-userRouter.post('/login', userController.loginUser, (req, res) => {
+userRouter.post('/login', loginUser, (req, res) => {
   console.log('🐣 User Login Processed.')
   return res.status(200).json(res.locals.loginSuccessful)
 })
 
-module.exports = userRouter;
+export default userRouter;
