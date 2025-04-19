@@ -1,18 +1,18 @@
-const express = require('express');
+import express, { json, urlencoded } from 'express';
 const app = express();
 const PORT = 8081;
-const CORS = require('cors');
+import CORS from 'cors';
 
 //          << Necessary >>
 // Converts incoming json in to js objects.
-app.use(express.json());
+app.use(json());
 // CORS STUFF
 app.use(CORS());
 // idk what it does but it's necessary just keep it
-app.use(express.urlencoded({ extended: true }))
+app.use(urlencoded({ extended: true }))
 
 // Import stuff?
-const userRouter = require('./routes/userRouter')
+import userRouter from './routes/userRouter.js';
 
 // lets us know backend is running
 app.get('/', (req, res) => {
@@ -51,4 +51,4 @@ app.listen(PORT, () => {
     console.log(`⛵ Server listening on port: ${PORT}`);
 })
 
-module.exports = app;
+export default app;

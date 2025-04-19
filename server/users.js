@@ -7,4 +7,4 @@ const users =  [
 ];
 
 //exporting!!
-module.exports = users;
+export default users;
