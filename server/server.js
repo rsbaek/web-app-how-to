@@ -1,18 +1,22 @@
-const express = require('express');
-const app = express();
-const PORT = 8081;
-const CORS = require('cors');
+import express, { json, urlencoded } from 'express';
+import CORS from 'cors';
+import dotenv from 'dotenv';
+// TODO CHANGE ALL IMPORTS
 
 //          << Necessary >>
 // Converts incoming json in to js objects.
-app.use(express.json());
+app.use(json());
 // CORS STUFF
+// run npm install cors
 app.use(CORS());
 // idk what it does but it's necessary just keep it
-app.use(express.urlencoded({ extended: true }))
+app.use(urlencoded({ extended: true }))
+
+const app = express();
+const PORT = process.env.PORT || 8081;
 
 // Import stuff?
-const userRouter = require('./routes/userRouter')
+import userRouter from './routes/userRouter';
 
 // lets us know backend is running
 app.get('/', (req, res) => {
@@ -51,4 +55,4 @@ app.listen(PORT, () => {
     console.log(`⛵ Server listening on port: ${PORT}`);
 })
 
-module.exports = app;
+export default app;
